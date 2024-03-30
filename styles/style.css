@@ -20,6 +20,8 @@ body {
   grid-template-rows: min-content min-content min-content;
   row-gap: 60px;
   column-gap: 15px;
+  z-index: 3;
+  box-shadow: 3px 0 10px rgb(192, 192, 192);
 }
 
 .dashboard .dashboard-title {
@@ -74,6 +76,8 @@ body {
   display: grid;
   grid-template: auto auto / 2fr 1fr;
   row-gap: 40px;
+  z-index: 2;
+  box-shadow: 0 3px 10px rgb(189, 189, 189);
 }
 
 .navbar .greeting {
@@ -190,6 +194,7 @@ body {
   box-sizing: border-box;
   padding: 0 25px;
   border-left: 7px solid rgb(240, 180, 41);
+  box-shadow: 3px 3px 10px rgb(189, 189, 189);
 }
 
 .canvas .projects .card h3 {
@@ -219,6 +224,7 @@ body {
 .canvas .trending {
   background-color: white;
   border-radius: 7px;
+  box-shadow: 3px 3px 10px rgb(189, 189, 189);
 }
 
 .canvas .announcement {
