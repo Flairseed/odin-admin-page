@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  display: grid;
+  grid-template: "dashboard nav"
+                 "dashboard body"/
+                 1fr 4fr
+}
+
+.dashboard {
+  padding: 1.5rem;
+  background-color: rgb(25, 146, 212);
+  grid-area: dashboard;
+  color: white;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: min-content min-content min-content;
+  row-gap: 60px;
+}
+
+.dashboard .dashboard-title {
+  grid-row: 1;
+  grid-column: 2;
+  height: fit-content;
+  margin: 0;
+}
+
+.dashboard .dashboard-first {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.dashboard .dashboard-second {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+.dashboard ul {
+  padding: 0;
+  height:  fit-content;
+  margin: 0;
+  display: grid;
+  row-gap: 30px;
+}
+
+.dashboard ul li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+.navbar {
+  padding: 20px 40px;
+  grid-area: nav;
+  display: grid;
+  grid-template: auto auto / 2fr 1fr;
+  row-gap: 40px;
+}
+
+.navbar .greeting p,
+.navbar .greeting h1 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.navbar .profile h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.navbar .searchbar #search-entry {
+  width: 100%;
+  height: 1.5rem;
+  border: none;
+  background-color: rgb(226, 232, 240);
+  border-radius: 15px;
+}
+
+.navbar .profile,
+.navbar .buttons {
+  justify-self: end;
+}
+
+.navbar .buttons {
+  align-self: center;
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 20px;
+}
+
+.navbar .buttons button {
+  font-size: 1rem;
+  padding: 0.7rem 2rem;
+  border: none;
+  color: white;
+  background-color: rgb(25, 146, 212);
+  border-radius: 25px;
+}
+
+.canvas {
+  background-color: rgb(226, 232, 240);
+  grid-area: body;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 20px;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.canvas .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  grid-auto-rows: 200px;
+  grid-row: 2 / 6;
+}
+
+.canvas .projects .card {
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.canvas .announcement,
+.canvas .trending {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.canvas .announcement {
+  grid-row-start: 2;
+  padding: 30px;
+  height: max-content;
+}
+
+.canvas .announcement h4, 
+.canvas .announcement p {
+  margin: 0;
+}
+
+.canvas .announcement p {
+  font-size: 0.8rem;
+}
+
+.canvas .trending {
+  padding: 10px;
+}
+
+.canvas .trending .app {
+  display: grid;
+  grid-template: 25px 25px / 50px 1fr;
+  padding: 0.5rem 0;
+}
+
+.canvas .trending .app .tag {
+  grid-column: 2;
+}
+
+.canvas .trending .app .name {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.canvas .trending p {
+  margin: 0;
+}
+
+.canvas h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  margin-bottom: 10px;
+}
