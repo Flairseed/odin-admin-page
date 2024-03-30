@@ -65,17 +65,41 @@ body {
 }
 
 .navbar {
-  padding: 20px 40px;
+  padding: 20px 60px 20px 40px;
   grid-area: nav;
   display: grid;
   grid-template: auto auto / 2fr 1fr;
   row-gap: 40px;
 }
 
+.navbar .greeting {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  column-gap: 20px;
+  align-items: center;
+}
+
 .navbar .greeting p,
 .navbar .greeting h1 {
   margin: 0;
   font-weight: bold;
+  grid-column: 2;
+}
+
+.navbar .greeting img {
+  height: 70px;
+  border-radius: 35px;
+  grid-row: 1 / span 2 ;
+}
+
+.navbar .profile {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  align-items: center;
+  justify-self: end;
+  gap: 30px;
+  padding-right: 30px;
 }
 
 .navbar .profile h3 {
@@ -83,17 +107,37 @@ body {
   margin: 0;
 }
 
+.navbar .profile .icon {
+  height: 25px;
+}
+
+.navbar .profile .profile-pic {
+  height: 50px;
+  border-radius: 25px;
+}
+
+.navbar .searchbar {
+  display: grid;
+  grid-template-columns: 25px 1fr;
+  column-gap: 20px;
+  align-items: center;
+}
+
 .navbar .searchbar #search-entry {
   width: 100%;
-  height: 1.5rem;
+  height: 2rem;
+  font-size: 1rem;
   border: none;
   background-color: rgb(226, 232, 240);
   border-radius: 15px;
+  outline: none;
+  box-sizing: border-box;
+  padding-left: 20px;
+  
 }
 
-.navbar .profile,
-.navbar .buttons {
-  justify-self: end;
+.navbar .searchbar img {
+  height: 25px;
 }
 
 .navbar .buttons {
@@ -176,13 +220,22 @@ body {
 }
 
 .canvas .trending {
-  padding: 10px;
+  padding: 1rem 1.5rem;
+  display: grid;
+  gap: 20px;
+  align-items: center;
 }
 
 .canvas .trending .app {
   display: grid;
   grid-template: 25px 25px / 50px 1fr;
-  padding: 0.5rem 0;
+  column-gap: 20px;
+  font-size: 0.9rem;
+}
+
+.canvas .trending .app img {
+  height: 50px;
+  border-radius: 25px;
 }
 
 .canvas .trending .app .tag {
